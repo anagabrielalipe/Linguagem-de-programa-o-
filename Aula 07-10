@@ -23,4 +23,42 @@ for(i=9; i>=0; i--){
 printf("\n %d", maior);
 	return 0;
 }
-	
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int comp_maior(int a, int b){
+	if(a>b)return a;
+	else return b;
+}
+int comp_menor(int a, int b){
+	if(a<b)return a;
+	else return b;
+}
+int main(){
+	int valores[10];
+	int maior, menor, i; 
+	printf("Leia os numeros\n");
+
+for(i=0; i<10; i++){
+	scanf("%d", &valores[i]);	
+}
+maior = valores[0];
+menor = valores[0];
+for (i=1, maior= valores[0]; i<5; i=i+2){
+        int comp_temp = comp_maior(valores[i],valores[i+1]);
+maior = comp_maior(maior, comp_temp);
+}
+for (i=1, menor = valores[0]; i<5; i=i+2){
+        int comp_temp = comp_menor(valores[i], valores[i+1]);
+        menor = comp_menor(menor, comp_temp);
+    }
+    maior = comp_maior(maior, valores[9]);
+	menor = comp_menor(menor, valores[9]);
+for(i=9; i>=0; i--){
+		printf("|%d|",valores[i]);		
+}
+printf("\n Maior: %d", maior);
+printf("\n Menor: %d", menor);
+	return 0;
+}	
