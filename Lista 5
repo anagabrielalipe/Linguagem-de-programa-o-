@@ -1,0 +1,37 @@
+// exercício 5 //
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+
+    int vetor[100];
+    int i, j;
+    int primo;
+
+    for (i = 0; i < 100; i++) {
+        vetor[i] = i + 1;
+    }
+    for (i = 0; i < 100; i++) {
+        if (vetor[i] % 2 == 0) {
+            printf("%d PAR", vetor[i]);
+        } else {
+            printf("%d IMPAR", vetor[i]);
+        }
+        primo = 1;
+        if (vetor[i] < 2) {
+            primo = 0;
+        } else {
+            for (j = 2; j < vetor[i]; j++) {
+                if (vetor[i] % j == 0) {
+                    primo = 0;
+                    break;
+                }
+            }
+        }
+        if (primo == 1) {
+            printf(" e PRIMO\n");
+        } else {
+            printf(" e NAO PRIMO\n");
+        }
+    }
+    return 0;
+}
