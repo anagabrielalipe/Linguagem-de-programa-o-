@@ -28,9 +28,9 @@ int main() {
             }
         }
         if (primo == 1) {
-            printf(" e PRIMO\n");
+            printf(" e PRIMO \n");
         } else {
-            printf(" e NAO PRIMO\n");
+            printf(" e NAO PRIMO \n");
         }
     }
     return 0;
