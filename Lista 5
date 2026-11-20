@@ -109,7 +109,7 @@ int main(int argc, char *argv[]) {
 
  int main() {
 
-  int vetor[100];
+ int vetor[100];
  int i, j;
  int primo;
 
